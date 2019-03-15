@@ -1,0 +1,2 @@
+SELECT distinct ?x
+WHERE { ?x ?y ?z}

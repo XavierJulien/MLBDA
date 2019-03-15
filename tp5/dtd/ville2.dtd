@@ -1,0 +1,7 @@
+<!ELEMENT ville (plusBeauMonument)>
+	<!ATTLIST ville nom CDATA #IMPLIED
+					departement CDATA #IMPLIED>
+<!ELEMENT plusBeauMonument EMPTY>
+	<!ATTLIST plusBeauMonument nom CDATA #IMPLIED
+							   tarif CDATA #IMPLIED>
+

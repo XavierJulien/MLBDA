@@ -1,0 +1,23 @@
+-- compléter l'entête 
+-- ==================
+
+-- NOM    :
+-- Prénom :
+
+-- NOM    :
+-- Prénom :
+
+-- Groupe :
+-- binome :
+
+-- ================================================
+set sqlbl on
+
+create type body Cubes as
+       member function volume return Number is
+       begin
+	return dimensions*dimensions*dimensions;
+       end;
+       member function masse return Number is
+       begin
+	

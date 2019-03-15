@@ -1,0 +1,7 @@
+Exercice 1 : 
+1.	Tous les titres de films : 
+/FILMS/FILM[*]/TITRE
+
+2.	Les titres des films d'horreur :
+//FILM[contains(GENRE,"Horreur")]/TITRE
+

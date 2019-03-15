@@ -1,0 +1,26 @@
+-- compléter l'entête 
+-- ==================
+
+-- NOM    :
+-- Prénom :
+
+-- NOM    :
+-- Prénom :
+
+-- Groupe :
+-- binome :
+
+-- ================================================
+
+-- stockage des données : définition des relations
+-- ====================
+
+create table LesMatieres of matiere;
+create table PiecesBase of piece_base; 
+create table PiecesComposite of piece_composite
+nested table compo store as tab1;
+
+-- instanciation des objets
+-- ========================
+
+

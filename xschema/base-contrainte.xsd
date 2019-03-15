@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--DOCTYPE xs:schema SYSTEM "XMLSchema.dtd"-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="base">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+	<xs:element ref="restaurant"/>
+	<xs:element ref="ville"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Restaurant -->
+  <xs:element name="restaurant">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element ref="fermeture" minOccurs="0"/>
+	<xs:element ref="menu" minOccurs="2" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nom" type="xs:string"/>
+      <xs:attribute name="etoile" type="nb_etoiles" use="required"/>
+      <xs:attribute name="ville" type="xs:string"/>
+    </xs:complexType>
+    <xs:keyref name="refVille" refer="cleVille">
+      <xs:selector xpath="restaurant"/>
+      <xs:field xpath="@ville"/>
+    </xs:keyref>
+  </xs:element>
+
+   <xs:simpleType name="nb_etoiles">
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Fermeture -->
+  <xs:element name="fermeture"/>
+  <!-- Menu -->
+  <xs:element name="menu">
+    <xs:complexType>
+      <xs:attribute name="nom" type="xs:string"/>
+      <xs:attribute name="prix" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Ville -->
+  <xs:element name="ville">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element ref="plusBeauMonument" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="nom" type="xs:string" use="required"/>
+      <xs:attribute name="departement" type="xs:integer" use="required"/>
+    </xs:complexType>
+    <xs:key name="cleVille">
+      <xs:selector xpath="ville"/>
+      <xs:field xpath="@nom"/>
+    </xs:key>
+  </xs:element>
+
+  <!-- plusBeauMonument -->
+  <xs:element name="plusBeauMonument">
+    <xs:complexType>
+      <xs:attribute name="nom" type="xs:string" use="required"/>
+      <xs:attribute name="tarif" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+ 
+</xs:schema>

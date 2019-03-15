@@ -1,0 +1,26 @@
+1/ //menu[@prix < '50']
+2/ //restaurant[@etoile='2' or @etoile='3']/menu
+3/ //vile[@departement='69']/@nom
+4/ //restaurant[contains(@ville,"Lyon]/@nom
+5/ //restaurant[@ville = //ville[contains(@departement='75']]/@nom
+6/ //ville[@nom = //restaurant[@etoile = '3']/@ville]/plusBeauMonument
+7/ //ville[@nom = //restaurant[count(menu) >= '4']]/@ville]
+8/  //restaurant[contains(fermeture,"dimanche"][@etoile = '3']
+9/ //restaurant[contains(menu/@nom,@ville)] 
+pour 2 menu : 
+   //restaurant[count(menu[contains(@nom,../@ville)])=2]
+10/
+a) //restaurant/menu[2] ou //menu[2]
+b) //menu[5]
+11/ //restaurant[@ville = //ville[3]/@nom]/@etoile
+12/ 
+a) //restaurant/menu[@prix < '150'][2]
+b) //restaurant/menu[2][@prix >= '150']
+
+18/ //restaurant[menu[contains(@nom,'Salade')]/@prix != menu[contains(@nom,'Salade')]/@prix]/@nom
+19/ //menu[not(preceding::menu/@prix=@prix)]/@prix
+20/ //restaurant[menu/@prix=id(@ville)/plusBeauMonument/@tarif]
+21/ 
+a)base/*/* : résultat => fermeture,menu,plusBeauMonument
+b)//* : résultat => tous les noeuds du document
+c)/base/*[@*<5]/@nom : résultat = le nom de tous les fils de base qui contienne un attribut dont la valeur est inférieure à 5. résultat : restaurant avec @etoile < 5 , ville avec @département < 5 

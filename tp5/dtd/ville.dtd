@@ -1,0 +1,7 @@
+<!ELEMENT ville (nom,departement,plusBeauMonument)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT departement (#PCDATA)>
+<!ELEMENT plusBeauMonument (nom,tarif)>
+	<!ELEMENT nom (#PCDATA)>
+	<!ELEMENT tarif (#PCDATA)>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE restaurant SYSTEM "exo2.dtd">
+
+<exo2>
+	<films nofilm="1" titre="reine des neiges" nationalite="etats-unis" realisateur="disney"
+		   couleur="couleur" annee="04/12/2013" duree="1h49" synopsys="Elsa et Anna sont les deux princesses du royaume d'Arendelle. Elsa, l'aînée, possède un puissant pouvoir : celui de contrôler la neige et la glace. Toutefois, son pouvoir n'est connu que de ses parents et de sa soeur car Elsa serait immédiatement considérée comme une sorcière aux yeux des habitants du royaume. Plusieurs fois, elle et Anna s'amusent de cette magie jusqu'à ce que Elsa blesse accidentellement sa soeur à la tête."/>
+	<films nofilm="2" titre="les indestructibles" nationalite="etats-unis" realisateur="disney"
+		   couleur="couleur" annee="24/11/204" duree="1h56" synopsys="Bob Paar était jadis l'un des plus grands super-héros de la planète. Tout le monde connaissait Mr. Indestructible, le héros qui, chaque jour, sauvait des centaines de vies et combattait le mal. Aujourd'hui, Mr. Indestructible est un petit expert en assurances qui n'affronte plus que l'ennui et un tour de taille en constante augmentation."/>
+		   
+	<abonnes code="1" nom="XAVIER" prenom="julien" norue="14" codepostal="77400" ville="lagny" batiment="null" etage="null" digicode="null" telephone="0619612443" email="julienxavier774@gmail.com" banque="bnp paribas" guichet="lagny" compte="05144148" nbemprunts="3"/>	   
+	
+	<abonnes code="1" nom="LI" prenom="yannick" norue="23" codepostal="94400" ville="vitry" batiment="a" etage="3" digicode="null" telephone="0123456789" email="lilili@gmail.com" banque="bnp paribas" guichet="vitry" compte="01256196" nbemprunts="0"/>
+	
+	<dvd/>
+	
+</exo2>

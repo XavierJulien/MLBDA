@@ -1,0 +1,45 @@
+
+<!ELEMENT films EMPTY>
+	<!ATTLIST films nofilm ID #REQUIRED
+					titre CDATA #IMPLIED
+					nationalite CDATA #IMPLIED
+					realisateur CDATA #IMPLIED
+					couleur CDATA #IMPLIED
+					annee CDATA #IMPLIED
+					genre CDATA #IMPLIED
+					duree CDATA #IMPLIED
+					synopsys CDATA #IMPLIED>
+
+<!ELEMENT acteurs EMPTY>
+	<!ATTLIST acteurs nofilm IDREF #REQUIRED 
+					  acteur ID #REQUIRED>
+	
+<!ELEMENT dvd EMPTY>
+	<!ATTLIST dvd nofilm IDREF #REQUIRED
+				  noexemplaire ID #REQUIRED
+				  support CDATA #IMPLIED
+				  statut CDATA #IMPLIED>
+				  
+<!ELEMENT abonnes EMPTY>
+	<!ATTLIST abonnes code ID #REQUIRED
+					  nom CDATA #IMPLIED
+					  prenom CDATA #IMPLIED
+					  norue CDATA #IMPLIED
+					  codepostal CDATA #IMPLIED
+					  ville CDATA #IMPLIED
+					  batiment CDATA #IMPLIED
+					  etage CDATA #IMPLIED
+					  digicode CDATA #IMPLIED
+					  telephone CDATA #IMPLIED
+					  email CDATA #IMPLIED
+					  banque CDATA #IMPLIED
+					  guichet CDATA #IMPLIED
+					  compte CDATA #IMPLIED
+					  nbemprunts CDATA #IMPLIED>
+
+<!ELEMENT empres EMPTY>
+	<!ATTLIST empres nofilm IDREF #REQUIRED
+					 noexemplaire IDREF #REQUIRED
+					 code IDREF #IMPLIED
+					 dateempres CDATA #IMPLIED>
+					 

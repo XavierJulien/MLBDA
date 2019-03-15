@@ -1,0 +1,28 @@
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>. 
+@prefix:<http://www.exemple.org/>. 
+   
+    :u1 a :Personne;
+    :âge 20;
+    :ami : u3;
+    :nom "Susan".
+   
+    :u3 a :Personne;
+    :âge  35;
+    : ami :u4;
+    :nom "Tom".
+   
+    :u2 a :Personne;
+    :âge 40;
+    :ami :u1;
+    :nom "Mike".
+    
+    :u4 a :Personne;
+    :âge 15;
+    :ami :u1;
+    :nom " Tim".
+    
+    :u5 a :Personne;
+    :âge 25;
+    :ami :u2;
+    :nom "Mary".

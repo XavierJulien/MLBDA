@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE xs:schema SYSTEM "XMLSchema.dtd">
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.juicers.org"
+            xmlns="http://www.juicers.org"
+            elementFormDefault="qualified">
+
+<!--<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> -->
+  <xs:element name="juicers">
+    <xs:complexType>
+    	<xs:sequence>
+      		<xs:element ref="juicer" minOccurs="0" maxOccurs="unbounded"/>
+    	</xs:sequence>	
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="juicer">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element name="name" type="xs:string"/>
+		<xs:element name="image" type="xs:string"/>
+		<xs:element name="description" type="xs:string"/>
+		<xs:element name="warranty" type="xs:string" minOccurs="0"/>
+		<xs:element name="weight" type="xs:integer" minOccurs="0"/>
+		<xs:element name="cost" type="money" maxOccurs="unbounded"/>
+		<xs:element name="retailer" type="xs:anyURI"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 	<xs:simpleType name="money">
+ 		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.0"/>
+ 		</xs:restriction>
+ 	</xs:simpleType>
+</xs:schema>

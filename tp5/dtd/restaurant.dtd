@@ -1,0 +1,11 @@
+<!ELEMENT restaurant (nom,lieu,fermeture,etoile,menu)>
+	<!ELEMENT nom (#PCDATA)>
+	<!ELEMENT lieu (ville)>
+		<!ELEMENT ville (nom,departement,plusBeauMonument)>
+			<!ELEMENT departement (#PCDATA)>
+			<!ELEMENT plusBeauMonument (nom,tarif)>
+				<!ELEMENT tarif (#PCDATA)>
+	<!ELEMENT fermeture (#PCDATA)>
+	<!ELEMENT etoile (#PCDATA)>
+	<!ELEMENT menu (nom,prix)>
+		<!ELEMENT prix (#PCDATA)>
